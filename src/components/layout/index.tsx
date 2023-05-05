@@ -157,8 +157,8 @@ export default function Layout(props: PropTypes) {
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxSizing: "border-box"
-          }
+            boxSizing: "border-box",
+          },
         }}
         variant="persistent"
         anchor="left"
@@ -240,7 +240,10 @@ export default function Layout(props: PropTypes) {
           })}
         </List>
       </Drawer>
-      <Main open={open}>{childrenWithProps}</Main>
+      <Main open={open}>
+        <DrawerHeader />
+        {childrenWithProps}
+      </Main>
     </Box>
   );
 }
