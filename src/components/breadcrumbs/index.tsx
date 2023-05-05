@@ -24,7 +24,7 @@ const BreadCrumbs = ({ level }: { level: string }) => {
     for (let i = 1; i < tempUniqueList.length; i++) {
       if (firstComponent?.routes) {
         let cmp = firstComponent?.routes.find(
-          ({ level: string }) => level === tempUniqueList[i]
+          ({ level }) => level === tempUniqueList[i]
         );
         if (cmp) {
           componentList.push(cmp);
